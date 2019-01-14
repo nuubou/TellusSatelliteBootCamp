@@ -16,5 +16,8 @@ RUN pip3 install pillow tensorflow keras jupyter
 WORKDIR /root
 RUN wget -q https://www.dropbox.com/s/qwidfkw78lsyeuc/Keras_test.ipynb
 
+RUN mkdir .jupyter
+ADD jupyter .jupyter
+
 EXPOSE 8888
-CMD jupyter notebook --ip=0.0.0.0 --allow-root
+CMD ["jupyter", "notebook"]
