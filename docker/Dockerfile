@@ -11,7 +11,7 @@ RUN apt-get update && \
         qgis python-qgis qgis-plugin-grass && \
     apt-get clean all
 
-RUN pip3 install pillow matplotlib scikit-image tensorflow keras jupyter
+RUN pip3 install pillow matplotlib scikit-image tensorflow keras jupyter Pandas
 
 WORKDIR /root
 RUN wget -q https://www.dropbox.com/s/qwidfkw78lsyeuc/Keras_test.ipynb
